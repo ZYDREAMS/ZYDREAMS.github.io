@@ -121,7 +121,7 @@
         <div class="logo-name">翼</div>
         <div class="logo-desc">
             
-            给喜欢的人发的每一条消息都是冒险，赌注是接下来一整天的心情好坏
+            给喜欢的人发的每一条消息都是冒险，赌注是接下来一整天甚至好几天心情的好坏
             
         </div>
     </div>
@@ -295,7 +295,7 @@
 
                     <div class="description center-align">
                     
-                        给喜欢的人发的每一条消息都是冒险，赌注是接下来一整天的心情好坏
+                        给喜欢的人发的每一条消息都是冒险，赌注是接下来一整天甚至好几天心情的好坏
                     
                     </div>
                 </div>
@@ -359,6 +359,41 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '175',
+        audio: JSON.parse('[{"name":"迷途的羔羊","artist":"安子与九妹","url":"https://music.163.com/#/song?id=1336866159","cover":"http://xxx.com/music-cover1.png"},{"name":"眉间雪(剧情歌)","artist":"晴愔","url":"https://music.163.com/#/song?id=29572090","cover":"/medias/music/cover2.png"},{"name":"山有木兮","artist":"伦桑 / 橙光音乐","url":"https://music.163.com/#/song?id=425100599","cover":"http://xxx.com/music-cover3.png"}]')
+    });
+});
+</script>
                     
 
                     
