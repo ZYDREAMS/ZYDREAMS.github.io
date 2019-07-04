@@ -280,8 +280,12 @@
     </div>
 </div>
 <script>
+//每隔5秒执行一次
+setInterval(show,5000);
+function show(){
 // 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + (new Date().getSeconds()/10) + '.jpg)');
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + (new Date().getSeconds()%10) + '.jpg)');
+}
 </script>
     </div>
 </div>
