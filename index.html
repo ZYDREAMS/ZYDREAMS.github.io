@@ -39,7 +39,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">翼</span>
                 </a>
@@ -54,7 +54,7 @@
             
             <i class="fa fa-home"></i>
             
-            <span>Index</span>
+            <span>首页</span>
         </a>
     </li>
     
@@ -63,7 +63,7 @@
             
             <i class="fa fa-tags"></i>
             
-            <span>Tags</span>
+            <span>标签</span>
         </a>
     </li>
     
@@ -72,7 +72,7 @@
             
             <i class="fa fa-bookmark"></i>
             
-            <span>Categories</span>
+            <span>分类</span>
         </a>
     </li>
     
@@ -81,7 +81,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>Archives</span>
+            <span>归档</span>
         </a>
     </li>
     
@@ -90,7 +90,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>About</span>
+            <span>关于我</span>
         </a>
     </li>
     
@@ -99,7 +99,7 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>Friends</span>
+            <span>友情链接</span>
         </a>
     </li>
     
@@ -114,7 +114,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.jpg" class="logo-img circle responsive-img">
         
         <div class="logo-name">翼</div>
         <div class="logo-desc">
@@ -133,7 +133,7 @@
                 
                 <i class="fa fa-fw fa-home"></i>
                 
-                Index
+                首页
             </a>
         </li>
         
@@ -142,7 +142,7 @@
                 
                 <i class="fa fa-fw fa-tags"></i>
                 
-                Tags
+                标签
             </a>
         </li>
         
@@ -151,7 +151,7 @@
                 
                 <i class="fa fa-fw fa-bookmark"></i>
                 
-                Categories
+                分类
             </a>
         </li>
         
@@ -160,7 +160,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                Archives
+                归档
             </a>
         </li>
         
@@ -169,7 +169,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                About
+                关于我
             </a>
         </li>
         
@@ -178,7 +178,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                Friends
+                友情链接
             </a>
         </li>
         
@@ -337,15 +337,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 </a>
 
                 
-                <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                <a href="https://github.com/ZYDREAMS" class="waves-effect waves-light btn" target="_blank">
                     <i class="fa fa-github-alt"></i>Github
                 </a>
                 
             </div>
             <div class="cover-social-link">
+    <a href="https://github.com/ZYDREAMS" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
 
 
-    <a href="mailto:xxx@xx.xx" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+
+    <a href="mailto:1278197020@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fa fa-envelope-open"></i>
     </a>
 
@@ -396,7 +400,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 $(function () {
     let coverSlider = $('.carousel');
     coverSlider.carousel({
-        duration: Number('120'),
+        duration: Number('300'),
         fullWidth: true,
         indicators: 'true' === 'true'
     });
@@ -445,18 +449,49 @@ $(function () {
                     
                         <div class="dream">
     
-    <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我的梦想
-    </div>
-    
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+            都道初心不可负，回头初心是何物。从天真无忧无虑到万物尽收眼底，谁能笑容明亮一如往昔？
         </div>
     </div>
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"迷途的羔羊","artist":"安子与九妹","url":"http://music.163.com/song/media/outer/url?id=1336866159.mp3","cover":"http://xxx.com/music-cover1.png"},{"name":"眉间雪(剧情歌)","artist":"晴愔","url":"http://music.163.com/song/media/outer/url?id=29572090.mp3","cover":"/medias/music/cover2.png"},{"name":"山有木兮","artist":"伦桑 / 橙光音乐","url":"http://music.163.com/song/media/outer/url?id=425100599.mp3","cover":"http://xxx.com/music-cover3.png"}]')
+    });
+});
+</script>
                     
 
                     
@@ -571,6 +606,9 @@ $(function () {
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
 
             
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">2.7k</span>
+            
 
             
 			
@@ -590,9 +628,13 @@ $(function () {
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/ZYDREAMS" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
 
 
-    <a href="mailto:xxx@xx.xx" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+
+    <a href="mailto:1278197020@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fa fa-envelope-open"></i>
     </a>
 
