@@ -941,13 +941,22 @@
 </tbody>
 </table>
 <p>7.Geo数据类型很适合应用于移动端基于位置的服务,如外卖应用中, 用户同时有家和公司两个送餐地址, 应用会自动根据当前位置确定用户想要送达的地址.</p>
-<h1 id="geoadd-key-longitude-latitude-member-longitude-latitude-member-…"><a href="#geoadd-key-longitude-latitude-member-longitude-latitude-member-…" class="headerlink" title="geoadd key longitude latitude member [longitude latitude member …]:"></a>geoadd key longitude latitude member [longitude latitude member …]:</h1><h1 id="可以将指定的地理空间位置-纬度、经度、名称-添加到指定的key中"><a href="#可以将指定的地理空间位置-纬度、经度、名称-添加到指定的key中" class="headerlink" title="可以将指定的地理空间位置(纬度、经度、名称)添加到指定的key中"></a>可以将指定的地理空间位置(纬度、经度、名称)添加到指定的key中</h1><p>   geoadd user 116.111 39.111 home<br>   geoadd user 126.111 39.111 office</p>
-<h1 id="geodist-key-member1-member2-unit-计算2点间距离"><a href="#geodist-key-member1-member2-unit-计算2点间距离" class="headerlink" title="geodist key member1 member2 [unit]:计算2点间距离"></a>geodist key member1 member2 [unit]:计算2点间距离</h1><p>   geodist user home office m</p>
-<h1 id="geopos-key-member-member-…-返回经纬度"><a href="#geopos-key-member-member-…-返回经纬度" class="headerlink" title="geopos key member [member …]:返回经纬度"></a>geopos key member [member …]:返回经纬度</h1><p>   geopos user home</p>
-<h1 id="geohash-key-member-member-…-返回Geohash-表示"><a href="#geohash-key-member-member-…-返回Geohash-表示" class="headerlink" title="geohash key member [member …]:返回Geohash 表示"></a>geohash key member [member …]:返回Geohash 表示</h1><p>   geohash user home</p>
-<h1 id="georadius-key-longitude-latitude-radius-m-km-ft-mi"><a href="#georadius-key-longitude-latitude-radius-m-km-ft-mi" class="headerlink" title="georadius key longitude latitude radius m|km|ft|mi:"></a>georadius key longitude latitude radius m|km|ft|mi:</h1><p>   georadius user 121.111 39.111 1000 km withcoord</p>
-<h1 id="同georadius"><a href="#同georadius" class="headerlink" title="同georadius"></a>同georadius</h1><h1 id="georadiusbymember-key-member-radius-m-km-ft-mi"><a href="#georadiusbymember-key-member-radius-m-km-ft-mi" class="headerlink" title="georadiusbymember key member radius m|km|ft|mi"></a>georadiusbymember key member radius m|km|ft|mi</h1><p>   georadiusbymember user home 100 km</p>
-<p>8.Pub/Sub(发布/订阅消息通信模式),在消费者下线的情况下,生产的消息会丢失,得使用专业的消息队列如rabbitmq等.</p>
+<pre><code># geoadd key longitude latitude member [longitude latitude member ...]:
+# 可以将指定的地理空间位置(纬度、经度、名称)添加到指定的key中
+geoadd user 116.111 39.111 home
+geoadd user 126.111 39.111 office
+# geodist key member1 member2 [unit]:计算2点间距离
+geodist user home office m
+# geopos key member [member ...]:返回经纬度
+geopos user home
+# geohash key member [member ...]:返回Geohash 表示
+geohash user home
+# georadius key longitude latitude radius m|km|ft|mi:
+georadius user 121.111 39.111 1000 km withcoord
+# 同georadius
+# georadiusbymember key member radius m|km|ft|mi
+georadiusbymember user home 100 km
+</code></pre><p>8.Pub/Sub(发布/订阅消息通信模式),在消费者下线的情况下,生产的消息会丢失,得使用专业的消息队列如rabbitmq等.</p>
 <table>
 <thead>
 <tr>
